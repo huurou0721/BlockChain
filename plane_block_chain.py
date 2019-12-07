@@ -4,7 +4,7 @@ import time
 import json
 from typing import Sequence
 
-INITIAL_BITS = 0x1d777777
+INITIAL_BITS = 0x1e777777
 MAX_32BIT = 0xffffffff
 
 
@@ -93,7 +93,7 @@ class Blockchain:
 
     def create_genesis(self):
         genesis_block = Block(0,
-                              "0000000000000000000000000000000000000000000000000000000000000000",
+                              "0" * 64,
                               "ジェネシスブロック",
                               datetime.datetime.now(),
                               self.initial_bits)
